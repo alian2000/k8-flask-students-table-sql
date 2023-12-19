@@ -1,3 +1,5 @@
+#https://www.geeksforgeeks.org/working-with-mysql-blob-in-python/?ref=lbp
+#https://www.geeksforgeeks.org/how-to-read-image-from-sql-using-python/?ref=lbp
 #GOLDEN SCRIPT WORKED WITH MYSQL MICROSERVICE IN MY K8 cluster, in flask namespace
 #https://towardsdatascience.com/how-to-deploy-a-flask-api-in-kubernetes-and-connect-it-with-other-micro-services-af16965b67fe
 
