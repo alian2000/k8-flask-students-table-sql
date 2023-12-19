@@ -1,0 +1,58 @@
+go to k8 cluster and create new pod to connnect to sql database
+kubectl -n flask run -it --rm --image=mysql --restart=Never mysql-client -- mysql --host mysql --password=admin
+
+mysql> USE flaskapi;
+Database changed
+mysql> SELECT * FROM users;
++---------+-----------+--------------------+---------------+
+| user_id | user_name | user_email         | user_password |
++---------+-----------+--------------------+---------------+
+|       1 | alian2000 | engalian@yahoo.com | gaza2023      |
+|       2 | samer     | samer@yahoo.com    | usa123        |
+|       3 | marwan    | marwan@yahoo.com   | dwq123        |
+|       4 | Nabih     | nabih@yahoo.com    | dad123        |
++---------+-----------+--------------------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT user_id FROM users;
++---------+
+| user_id |
++---------+
+|       1 |
+|       2 |
+|       3 |
+|       4 |
++---------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT user_id,user_password FROM users;
++---------+---------------+
+| user_id | user_password |
++---------+---------------+
+|       1 | gaza2023      |
+|       2 | usa123        |
+|       3 | dwq123        |
+|       4 | dad123        |
++---------+---------------+
+4 rows in set (0.00 sec)
+==============================================
+create new tabl students in databasr
+CREATE TABLE students(student_id INT PRIMARY KEY AUTO_INCREMENT, student_name VARCHAR(255), student_email VARCHAR(255),student_pic VARCHAR(255), student_password VARCHAR(255));
+
+inset a row(values) into the database
+
+INSERT INTO students (student_id, student_name, student_email, student_pic, student_password) VALUES (1,"Usama", "engalian@yahoo.com","https://www.kawasaki.com/motorcycle/klr-klx/on-off-road/klx-250","admin");
+
+INSERT INTO students (student_id, student_name, student_email, student_pic, student_password) VALUES (2,"husam", "husam@yahoo.com","https://www.kawasaki.com/motorcycle/klr-klx/on-off-road/klx-250","admin");
+
+curl -H "Content-Type: application/json" -d '{"name": "Wael AL-Dahdouh", "email": "wael@aljazeera.net", "pwd": "camera2023"}' http://192.168.86.32:31758/create
+"User created successfully!"
+
+----------------------------------------
+for students table in the same databae
+
+
+curl -H "Content-Type: application/json" -d '{"student_name": "Wael AL-Dahdouh", "student_email": "wael@aljazeera.net","student_pic":"http:www.aljazeera.com", "student_pwd": "camera2023"}' http://192.168.86.32:30165/create
+
+30165
+
