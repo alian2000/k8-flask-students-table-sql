@@ -1,1 +1,3 @@
-My name is Usama Alian.
+the python codes with golden names, interacts with mysql microservice to create,insert,select db.
+we have images in the db as blob get converted to binary when we insert them into the DB
+also get retrived back from binary format to png.
